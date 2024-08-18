@@ -2,7 +2,7 @@
 import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
 import Link from "next/link";
 
-export default function Header() {
+function Header() {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
       {/* <Toolbar>
@@ -30,3 +30,4 @@ export default function Header() {
     </AppBar>
   );
 }
+export default Header;

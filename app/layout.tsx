@@ -1,19 +1,19 @@
 // app/layout.tsx
 
-import ThemeWrapper from './styles/ThemeWrapper';
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import Link from 'next/link';
-import {Metadata} from "./metadata"
+import ThemeWrapper from "./styles/ThemeWrapper";
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import Link from "next/link";
+import { Metadata } from "./metadata";
 
 export const metadata: Metadata = {
-  title: 'Spend Ruby Complaint System',
-  description: 'AI-powered complaint categorization for e-commerce businesses',
+  title: "Spend Ruby Complaint System",
+  description: "AI-powered complaint categorization for e-commerce businesses",
 };
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
