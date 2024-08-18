@@ -1,15 +1,13 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import { ThemeProvider } from '@mui/material/styles'
-import CssBaseline from '@mui/material/CssBaseline'
-import theme from './styles/theme'
+// app/layout.tsx
 
-const inter = Inter({ subsets: ['latin'] })
+import ThemeWrapper from './styles/ThemeWrapper';
+import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
+import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Spend Ruby Complaint System',
   description: 'AI-powered complaint categorization for e-commerce businesses',
-}
+};
 
 export default function RootLayout({
   children,
@@ -18,12 +16,35 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <ThemeProvider theme={theme}>
-          <CssBaseline />
+      <body>
+        <ThemeWrapper>
+          <AppBar position="static" color="transparent" elevation={0}>
+            <Toolbar>
+              <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+                Spend Ruby
+              </Typography>
+              <Box>
+                <Link href="/" passHref>
+                  <Button color="inherit">Home</Button>
+                </Link>
+                <Link href="/submit-complaint" passHref>
+                  <Button color="inherit">Submit</Button>
+                </Link>
+                <Link href="/view-complaints" passHref>
+                  <Button color="inherit">View</Button>
+                </Link>
+                <Link href="/similar-complaints" passHref>
+                  <Button color="inherit">Similar</Button>
+                </Link>
+                <Link href="/dashboard" passHref>
+                  <Button color="inherit">Dashboard</Button>
+                </Link>
+              </Box>
+            </Toolbar>
+          </AppBar>
           {children}
-        </ThemeProvider>
+        </ThemeWrapper>
       </body>
     </html>
-  )
+  );
 }
