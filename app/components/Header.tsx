@@ -1,22 +1,6 @@
 "use client";
 import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
 import Link from 'next/link';
-<Box>
-          <Link href="/" passHref>
-            <Button color="inherit">Home</Button>
-          </Link>
-          <Link href="/submit-complaint" passHref>
-            <Button color="inherit">Submit</Button>
-          </Link>
-          <Link href="/view-complaints" passHref>
-            <Button color="inherit">View</Button>
-          </Link>
-          <Link href="/similar-complaints" passHref>
-            <Button color="inherit">Similar</Button>
-          </Link>
-          <Link href="/dashboard" passHref>
-            <Button color="inherit">Dashboard</Button>
-          </Link>
 
 export default function Header() {
   return (
