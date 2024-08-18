@@ -1,11 +1,11 @@
 "use client";
-import { AppBar, Toolbar, Typography, Button, Box } from '@mui/material';
-import Link from 'next/link';
+import { AppBar, Toolbar, Typography, Button, Box } from "@mui/material";
+import Link from "next/link";
 
 export default function Header() {
   return (
     <AppBar position="static" color="transparent" elevation={0}>
-      <Toolbar>
+      {/* <Toolbar>
         <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
           Spend Ruby
         </Typography>
@@ -26,7 +26,7 @@ export default function Header() {
             <Button color="inherit">Dashboard</Button>
           </Link>
         </Box>
-      </Toolbar>
+      </Toolbar> */}
     </AppBar>
   );
 }
